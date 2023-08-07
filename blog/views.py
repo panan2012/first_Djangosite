@@ -7,7 +7,8 @@ from .forms import PostForm
 def homepage(request):
     return render(request, 'blog/homepage.html')
 
-
+def contact(request):
+    return render(request, 'blog/contact.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
