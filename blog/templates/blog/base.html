@@ -18,9 +18,24 @@
                     <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
                 {% endif %}
                 
-                <h1><a href="/">Am Panan</a></h1>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'media/logo_panan.png' %}" width="50" height="50" class="d-inline-block align-top" alt="My Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="/">Am Panan</a>
+                        <a class="nav-item nav-link" href="{% url 'post_list' %}">My Blog</a>
+                        <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
+                      </div>
+                    </div>
+                  </nav>
+                <!-- <h1><a href="/">Am Panan</a></h1>
                 <h1><a href="{% url 'post_list' %}">My Blog</a></h1>
-                <h1><a href="{% url 'contact' %}">Contact</a></h1>
+                <h1><a href="{% url 'contact' %}">Contact</a></h1> -->
             </div>
             <div class="content container">
                 <div class="row">
