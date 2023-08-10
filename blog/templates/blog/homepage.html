@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -7,8 +8,9 @@
 
       <section>
       <h3>Background</h3>
-      <p>I am currently a freelancer creating things for the web together with great people. I graduated from Naresuan University and after that, I worked for the government for about 3 years in an academic position, then moved to work in Bangkok as an office secretary and tried to learn code online And worked in the company as an engineer after that, the last company to do the position Front end developer.</p>
-      </section>
+        <p>I am currently a freelancer creating things for the web together with great people. I graduated from Naresuan University and after that, I've done a variety of jobs from many companies Until I'm  fell in love with being a front-end developer.</p>
+        <p>When I'm not hanging out with my family or at the computer you can find me at marathons events or trail running events in Thailand, or I'm under the sea because I might be diving.</p>
+    </section>
 
       <section>
       <h3>Skill</h3>
@@ -51,5 +53,11 @@
       </table>
     </div>
       </section>
-
 {% endblock %}
+
+{% block photo %}
+  <picture>
+      <img src="{% static 'media/myphoto.jpg' %}" class="img-fluid img-thumbnail" alt="PananPhoto">
+  </picture>
+ {% endblock %}
+     
