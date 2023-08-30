@@ -20,7 +20,7 @@ podman  exec -it =idofcontainer= /bin/bash
 ```bash
 podman run -it -p 9000:8000 panan2012/blog
 
-podman run -it --network=host panan2012/blog 
+podman run -it --network=host -e DATABASE_URL="postgres://postgres:postgres@127.0.0.1:5432/blog" panan2012/blog 
 ```
 
 ## DB
@@ -36,3 +36,10 @@ $env:DATABASE_URL="postgres://postgres:postgres@127.0.0.1:5432/blog"
 $env:DATABASE_URL="sqlite:///D:\Projects\DjangoGirl_project\db.sqlite3"
 ```
 ## ConnectNetwork
+
+## Frontend
+
+```bash
+cd frontend
+sass --watch ./scss/custom.scss ../blog/static/css/custom.css
+```
