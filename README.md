@@ -27,6 +27,10 @@ podman run -it --network=host -e DATABASE_URL="postgres://postgres:postgres@127.
 ```bash
 podman run --name blog-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres:15 
 ```
+```bash
+podman ps -a 
+podman start 182
+```
 ## Export
 
 ```bash
