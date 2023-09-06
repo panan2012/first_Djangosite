@@ -1,0 +1,69 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+      <h1>Hello!</h1>
+      <h2>I'm Panan, Front End Developer focused on bildding beautiful interfaces & experiences</h2>
+
+      <section>
+      <h3>Background</h3>
+        <p>I am currently a freelancer creating things for the web together with great people. I graduated from Naresuan University and after that, I've done a variety of jobs for many companies Until I'm  fell in love with being a front-end developer.</p>
+        <p>When I'm not hanging out with my family or at the computer you can find me at marathons events or trail running events in Thailand, or I'm under the sea because I might be diving.</p>
+    </section>
+
+      <section>
+      <h3>Skill</h3>
+      <div class="table-responsive-sm">
+        <table class="table table-borderless">
+        <thead>
+        <tr>
+            <th scope="col">Languages</th>
+            <th scope="col">Frameworks</th>
+            <th scope="col">Tools</th>
+            <th scope="col">Design</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>JavaScript </td>
+            <td>Vue.js</td>
+            <td>Git & Github</td>
+            <td>Photoshop</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Figma</td>
+            <td>FireFox DevTools</td>
+            <td>Tinkercad</td>
+        </tr>
+        <tr>
+            <td>CSS/SCSS</td>
+            <td>Wordpress</td>
+            <td>Bash</td>
+            <td>blender</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Django</td>
+            <td>Google Chrome DevTools</td>
+            <td>Gimp & Inkscape</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>PostgreSQL</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+      </section>
+{% endblock %}
+
+{% block photo %}
+  <picture>
+      <img src="{% static 'media/myphoto.jpg' %}" class="img-fluid img-thumbnail" alt="PananPhoto">
+  </picture>
+ {% endblock %}
+     

@@ -1,6 +1,11 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from wagtail.models import Page
+
+
+class HomePage(Page):
+    pass
 
 
 class Post(models.Model):
