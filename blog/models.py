@@ -2,10 +2,23 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from wagtail.models import Page
+from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
 
 
 class HomePage(Page):
     pass
+
+
+
+class BlogIndexPage(Page):
+    # add the get_context method:
+    def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        # blogpages = self.get_children().live().order_by('-first_published_at')
+        posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+        context['posts'] =posts
+        return context
 
 
 class Post(models.Model):
